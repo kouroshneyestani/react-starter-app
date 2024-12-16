@@ -11,7 +11,7 @@ export default {
     },
     plugins: [
         // Add plugins here, for example:
-        // require('@tailwindcss/forms'),
+        require('@tailwindcss/forms'),
         // require("@tailwindcss/typography"),
     ],
     variants: {
