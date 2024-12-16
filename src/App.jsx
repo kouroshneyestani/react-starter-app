@@ -1,9 +1,14 @@
+import { BrowserRouter} from "react-router-dom";
+
+import Header from "./components/Header";
+import AppRoutes from "./routes";
 
 function App() {
     return (
-        <div className="w-full h-screen flex items-center justify-center">
-            <h1 className="text-6xl">welcome</h1>
-        </div>
+        <BrowserRouter>
+            <Header />
+            <AppRoutes />
+        </BrowserRouter>
     );
 }
 
