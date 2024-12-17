@@ -11,6 +11,9 @@ import AuthLayout from "../layouts/Auth";
 import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
 
+import PortfolioLayout from "../layouts/Portfolio";
+import WeatherApp from "../pages/Portfolio/WeatherApp";
+
 // Define the routes array
 const routes = [
     {
@@ -22,13 +25,13 @@ const routes = [
         path: "dashboard",
         element: <DashboardLayout />,
         children: [
-            { index: true, element: <Profile /> }, 
+            { index: true, element: <Profile /> },
             { path: "settings", element: <Settings /> },
         ],
     },
     {
         path: "auth",
-        element: <AuthLayout />, 
+        element: <AuthLayout />,
         children: [
             {
                 path: "login",
@@ -37,6 +40,16 @@ const routes = [
             {
                 path: "register",
                 element: <Register />,
+            },
+        ],
+    },
+    {
+        path: "portfolio",
+        element: <PortfolioLayout />,
+        children: [
+            {
+                path: "weather-app",
+                element: <WeatherApp />,
             },
         ],
     },
