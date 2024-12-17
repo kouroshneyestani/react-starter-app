@@ -9,4 +9,13 @@ export default defineConfig({
             /* plugin options */
         }),
     ],
+    server: {
+        proxy: {
+            "/firebase": {
+                target: "https://firebase.googleapis.com",
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/firebase/, ""),
+            },
+        },
+    },
 });
